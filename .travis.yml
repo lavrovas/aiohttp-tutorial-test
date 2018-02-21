@@ -9,3 +9,9 @@ install:
 script:
   - python -m pytest tests
   - python -m mypy --strict-optional --ignore-missing-imports --warn-unused-ignores --warn-redundant-casts --disallow-untyped-defs --disallow-untyped-calls .
+deploy:
+  provider: heroku
+  app:
+    master: aiohttp-tutorial-test
+  api_key:
+    secure: "Skj9Fz6KYbS0fs778Feg4jIVKNCENFtogkO88uyJCyo4G9o9c53d26C6XldV1e6Pzg9R2AQYHRm29qbKHdZflsXG715imheBc/Va09hY/eV+AyzwwX11wSJ0IbTJyWjt8uAPP05hKpj58qkaQ/hQvtoPTamlVMbh90MQTKPMAwDdj3MMNp3yiC4CKRDDmu4fqMzlyKXLQ5S5khnK8C2tTNY3baCJjPaonkNfZLiHjzEnbd2444S01WB/fbczTHQ/g8UasVWO0cYs27aupMqQXm0uzmjVirenVQ/KpawTss1Yy1iH2DEKu1/3u687AWqEwZnSH7YtYDvEaHP/LIOxLxLCt51IZyi+T6mSgv1fk9o14bFCty002xvaj8hTqNamBXqLtpwwV7R+DaD9W4hNjBoNIGxRD32BX6zNWw2x7ZkhtuQM/12gHFBGiIw5ZrjjDLaF7fR8ZJ54QiChu86bXrxKhpscTJ2EGa56uyeCas4qF6aeuXofL/hpPS3C+DQTv8FD/ikr3fay7z923cuQjtmQqMzgWANoVXA/sk2OD0Sp6x8Nv+Jj6QMOQJtTEOQ4nFlCqGWeiRlQSNHsMw6I/rWL02r1pwWLwnX7x3pw9Yt0GcCLNOHbSKf0G7mpxsaey7C5P0JH+Mwo2JD2xQ386KyD60RYTfFX8Men3GfNvts="
