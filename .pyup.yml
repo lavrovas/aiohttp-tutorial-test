@@ -1,0 +1,11 @@
+update: all
+branch: master
+schedule: "every week"
+pin: True
+search: False
+requirements:
+  - requirements.txt
+assignees:
+ - lavrovas
+branch_prefix: pyup-
+close_prs: True
