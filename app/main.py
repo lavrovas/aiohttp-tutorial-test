@@ -1,3 +1,5 @@
+import argparse
+
 from aiohttp import web
 from aiohttp.web_app import Application
 
@@ -10,10 +12,21 @@ def init() -> Application:
     return app
 
 
-def main() -> None:
+def parse_args(argv):
+    parser = argparse.ArgumentParser(description='Aiohttp tutorial app')
+    parser.add_argument('-H', '--host', type=str, default='127.0.0.1', help='Network interface to use')
+    parser.add_argument('-P', '--port', type=int, default=8080, help='Network port to use')
+    return parser.parse_args(argv)
+
+
+def main(argv) -> None:
+    args = parse_args(argv)
+
     app = init()
-    web.run_app(app, host='127.0.0.1', port=8080)
+    web.run_app(app, host=args.host, port=args.port)
 
 
 if __name__ == '__main__':
-    main()
+    import sys
+
+    main(sys.argv[1:])
