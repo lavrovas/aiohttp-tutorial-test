@@ -1,9 +1,11 @@
 Targets
 =======
 
-  - travis
-  - mypy
-  - codecov
-  - heroku
-  - pyup
+  - ~~travis~~
+  - ~~mypy~~
+  - ~~codecov~~
+  - ~~heroku~~
+  - ~~pyup~~
+  - pypi
+  - selenium
   - readthedocs (?)
