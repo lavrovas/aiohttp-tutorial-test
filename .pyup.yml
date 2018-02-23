@@ -5,6 +5,7 @@ pin: True
 search: False
 requirements:
   - requirements.txt
+  - requirements-ci.txt
 assignees:
   - lavrovas
 branch_prefix: pyup-
