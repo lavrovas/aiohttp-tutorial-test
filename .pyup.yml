@@ -6,6 +6,6 @@ search: False
 requirements:
   - requirements.txt
 assignees:
- - lavrovas
+  - lavrovas
 branch_prefix: pyup-
 close_prs: True
