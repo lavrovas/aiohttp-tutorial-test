@@ -1,17 +1,14 @@
-from aiohttp import web
+from typing import Dict
+
+import aiohttp_jinja2
 from aiohttp.web_request import Request
-from aiohttp.web_response import Response
 
 
-async def index(request: Request) -> Response:
-    user = {'username': 'Miguel'}
-    return web.Response(content_type='text/html', body=(
-        '<html>\n'
-        '    <head>\n'
-        '        <title>Home Page - Microblog</title>\n'
-        '    </head>\n'
-        '    <body>\n'
-        '        <h1>Hello, ' + user['username'] + '!</h1>\n'
-        '    </body>\n'
-        '</html>')
-    )
+@aiohttp_jinja2.template('index.html')
+async def index(request: Request) -> Dict:
+    return {
+        'title': 'Home Page',
+        'user': {
+            'username': 'Miguel',
+        },
+    }
