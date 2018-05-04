@@ -1,6 +1,6 @@
 update: all
 branch: master
-schedule: "every week"
+schedule: "every month"
 pin: True
 search: False
 requirements:
