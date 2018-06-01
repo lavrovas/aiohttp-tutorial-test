@@ -1,6 +1,6 @@
 aiohttp==3.3.0
 async-timeout==3.0.0
-attrs==17.4.0
+attrs==18.1.0
 chardet==3.0.4
 idna==2.6
 idna-ssl==1.0.1
