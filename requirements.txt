@@ -4,5 +4,5 @@ attrs==19.3.0
 chardet==3.0.4
 idna==2.9
 idna-ssl==1.1.0
-multidict==4.7.4
+multidict==4.7.5
 yarl==1.4.2
